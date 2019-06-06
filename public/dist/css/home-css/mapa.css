@@ -1,0 +1,137 @@
+body{
+	
+}
+.grid{
+	margin-left: 50px;
+	margin-right: 50px;
+
+
+}
+
+.alta{
+	transition: transform .2s;
+	width: 150px;
+}
+
+.alta:hover{
+	transform: scale(1.5);
+}
+
+
+.baja{
+	transition: transform .2s;
+	margin-top: -42px;
+	margin-left: 15px;
+		width: 150px;
+
+}
+
+.baja:hover{
+	transform: scale(1.5);
+}
+
+.totonaca{
+	transition: transform .2s;
+	margin-left: 100px;
+	margin-top: -75px;
+		width: 120px;
+
+}
+
+.totonaca:hover{
+	transform: scale(1.5);
+}
+
+.nautla{
+	transition: transform .2s;
+	margin-left: 156px;
+	margin-top: -41px;
+			width: 100px;
+
+}
+
+.nautla:hover{
+	transform: scale(1.5);
+}
+
+.capital{
+	transition: transform .2s;
+	margin-left: 140px;
+	margin-top: -38px;
+			width: 145px;
+
+}
+
+.capital:hover{
+	transform: scale(1.5);
+}
+
+.montanas{
+	transition: transform .2s;
+	margin-left: 150px;
+	margin-top: -121px;
+				width: 125px;
+
+}
+
+.montanas:hover{
+	transform: scale(1.5);
+}
+
+.sotavento{
+	transition: transform .2s;
+	margin-left: 213px;
+	margin-top: -38px;
+				width: 125px;
+
+}
+.sotavento:hover{
+	transform: scale(1.5);
+}
+
+.papaloapan{
+	transition: transform .2s;
+	margin-left: 245px;
+	margin-top: -118px;
+				width: 190px;
+
+}
+.papaloapan:hover{
+	transform: scale(1.5);
+}
+
+.tuxtla{
+	margin-top: -175px;
+	margin-left: 380px;
+
+}
+
+.tuxtla1{
+	transition: transform .2s;
+					width: 100px;
+
+
+}
+.tuxtla1:hover{
+	transform: scale(1.5);
+}
+.olmeca{
+	transition: transform .2s;
+	margin-left: 399px;
+	margin-top: -72px;
+					width: 240px;
+
+
+}
+.olmeca:hover{
+	transform: scale(1.5);
+}
+
+
+
+
+
+
+
+
+

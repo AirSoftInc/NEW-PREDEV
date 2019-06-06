@@ -1,0 +1,1 @@
+CREATE DATABASE predev_plataform;

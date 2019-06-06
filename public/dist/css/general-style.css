@@ -1,0 +1,62 @@
+.welcome{
+    padding-top: 32px;
+}
+
+.option-dropdown{
+    font-size: 13px;
+}
+
+.form-title{
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-border-rounded{
+    border-radius: 10px;
+}
+
+.statistics-chart{
+    margin-left: -140px;
+}
+.input-radius{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#btn2{
+    background-color: #155fff;
+    color: #fff;
+    border-color: #155fff;
+    border-radius: 5px;
+    font-size: .9286rem;
+    padding: .6rem 1.4rem;
+    text-transform: uppercase;
+    
+}
+#btn2:hover{
+    background: #64e500;
+}
+#text-color2{
+    color: #a6a9b7;
+}
+#text-color2:hover{
+    color: #155fff;
+}
+#email{
+
+}
+#email:focus{
+    border-color: #155fff;
+}
+#password:focus{
+    border-color: #155fff;
+}
+
+.register-container{
+    overflow-y: auto;
+    height: 60vh;
+    margin-top: -60px;
+}
+
+.pt-20{
+    padding-top: 20px;
+}

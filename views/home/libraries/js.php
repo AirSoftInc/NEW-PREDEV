@@ -1,0 +1,13 @@
+<script src="../../public/dist/js/home-js/jquery-3.2.1.min.js"></script>
+<script src="../../public/dist/js/home-js/popper.min.js"></script>
+<script src="../../public/dist/js/home-js/bootstrap.min.js"></script>
+<script src="../../public/dist/js/home-js/bootstrap-dropdownhover.min.js"></script>
+<script src="../../public/dist/js/home-js/bootstrap-slider.js"></script>
+<script src="../../public/dist/js/home-js/jquery.flexslider-min.js"></script>
+<script src="../../public/dist/js/home-js/slick.min.js"></script>
+<script src="../../public/dist/js/home-js/owl.carousel.min.js"></script>
+<script src="../../public/dist/js/home-js/css3-animate-it.js"></script>
+<script src="../../public/dist/js/home-js/magnific-popup.min.js"></script>
+<script src="../../public/dist/js/home-js/jquery.fancybox.js"></script>
+<script src="../../public/dist/js/home-js/player-min.js"></script>
+<script src="../../public/dist/js/home-js/script.js"></script>

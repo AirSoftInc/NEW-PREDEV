@@ -25,7 +25,7 @@
                                     <img id="logo_img" src="../../public/dist/img/img-dashboard/PREDEV.png"   width= "300px" height= "100px"> 
                                         <h1 class="mb-2">Colabora con PREDEV</h1>
                                         <p>Bienvenido, por favor ingresa a tu cuenta.</p>
-                                        <form id="login-form" action="validar.php" name="login" method="post" class="mt-3 mt-sm-5">
+                                        <form id="login-form" action="" name="login" method="post" class="mt-3 mt-sm-5">
                                             <div class="row">
                                                 <div class="col-12">
                                                     <div class="form-group">
@@ -49,7 +49,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mt-3">
-                                                    <button type="submit" id="btn2" class="btn btn-success">Ingresar</button>
+                                                    <a type="submit" id="btn2" class="btn btn-success" href="../dashboard/index.php">Ingresar</a>
                                                 </div>
                                             </div>
                                         </form>

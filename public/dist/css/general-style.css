@@ -60,3 +60,53 @@
 .pt-20{
     padding-top: 20px;
 }
+
+.h-60{
+    height: 65vh;
+}
+
+.mt-8{
+    margin-top: -8vh;
+}
+
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-left: 25px;
+}
+
+.color-blue{
+    color: #2c3e50 !important;
+    font: bold;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+#color-i-icon{
+    background-color: rgb(9, 20, 38);
+    border-color: rgb(9, 20, 38); 
+}
+
+.border-solid{
+    border: solid 1px;
+    border-color: #bdc3c7 !important;
+}
+
+.pt-31{
+    padding-top: 31px;
+}
+
+.form-control:focus{
+    outline: none;
+}
+
+.pos-buttom{
+    padding-top: 27px;
+}
+
+.border-buttom{
+    border-radius: 20px;
+}

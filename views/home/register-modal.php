@@ -26,7 +26,7 @@
                                             <p class="title-register col-lg-12">¿Qué tipo de usuario eres?</p>
                                             <div class="form-group col-lg-4">
                                                 <select id="userType" name="userType" class="form-control userType">
-                                                    <option value="E">Colaborador</option>
+                                                    <option value="M">Miembro</option>
                                                     <option value="I">Institución</option>
                                                 </select>
                                             </div>

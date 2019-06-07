@@ -9,7 +9,7 @@ $(document).ready(function(){
     
     $('#user-form').submit(function (e){
         switch ($('#userType').val()) {
-            case "E":
+            case "M":
                 const userEmployeForm = {
                     name: $('#name').val(),
                     lastName: $('#lastName').val(),
@@ -21,13 +21,11 @@ $(document).ready(function(){
                     municipality: $('#municipality').val(),
                     validate: "OK"
                 }
-
-
-                postFormWithResponse("../../service/test.php", userEmployeForm, function (respose){
-                    console.log(respose);
-                }); 
                 
-
+                // postFormWithResponse("../../service/test.php", userEmployeForm, function (respose){
+                //     console.log(respose);
+                // }); 
+                
                 $('#user-form').trigger('reset');
             break;
 
@@ -51,9 +49,9 @@ $(document).ready(function(){
                     validate: "OK"
                 }
 
-                postFormWithResponse("../../service/test.php", userInstitutionForm, function (respose) {
-                    console.log(respose);
-                }); 
+                // postFormWithResponse("../../service/test.php", userInstitutionForm, function (respose) {
+                //     console.log(respose);
+                // }); 
                 
                 $('#user-form').trigger('reset');
             break;
@@ -65,7 +63,7 @@ $(document).ready(function(){
 
     function userTypeCheck(userType){
         switch (userType) {
-            case "E":
+            case "M":
                 document.getElementById("RFCContainer").innerHTML = "";
                 document.getElementById("userAddres").innerHTML = getEmployeAddres();
                 document.getElementById("aditionalInformation").innerHTML = "";  

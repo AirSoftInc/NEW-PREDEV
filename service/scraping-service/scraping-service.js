@@ -3,7 +3,10 @@ $(document).ready(function(){
     onInit();
 
     function onInit() {
-        getNewsFoundData();
+        const scrapingDate = new Date().getDate();
+        if (scrapingDate == 1) {
+            getNewsFoundData();
+        } 
     }
 
     //Method to carry out the web scraping of the news found
@@ -14,8 +17,8 @@ $(document).ready(function(){
             paperForm, function(response){
                 try {
                     const newsFound = JSON.parse(response);
-                    newsFound.map(newspaper2 =>{
-                        newspaper2.new = newspaper;
+                    newsFound.map(newspaper =>{
+                        newspaper.new = newspaper;
                     });
                     dateFilter(newsFound);
                 } catch (error) {

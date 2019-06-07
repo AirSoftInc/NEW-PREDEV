@@ -1,1 +1,1 @@
-CREATE DATABASE predev_plataform;
+CREATE DATABASE predev_platform;

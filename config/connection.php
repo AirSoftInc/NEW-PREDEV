@@ -1,3 +1,3 @@
 <?php
-    $connection = mysqli_connect('localhost', 'root', 'root', 'predev_platform');
+    $connection = mysqli_connect('localhost', 'root', '', 'predev_platform');
 ?>

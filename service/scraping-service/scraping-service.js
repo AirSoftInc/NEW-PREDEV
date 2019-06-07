@@ -14,7 +14,10 @@ $(document).ready(function(){
             paperForm, function(response){
                 try {
                     const newsFound = JSON.parse(response);
-                    dateFilter(newsFound)
+                    newsFound.map(newspaper2 =>{
+                        newspaper2.new = newspaper;
+                    });
+                    dateFilter(newsFound);
                 } catch (error) {
                     console.log(response);
                 }
@@ -72,7 +75,23 @@ $(document).ready(function(){
             nonDiscriminationPhrasesFound.length > 0 ? finalNewsFilterByPhrases.push(newData) : newsFilter.push(newData);
         });
 
-        console.log(newsFilter);
-        
+        getContentByNew(newsFilter);
+    }
+
+    function getContentByNew(newsFilter) {
+        newsFilter.forEach(news => {
+            const newData = { 
+                url: news.link,
+                new: news.new
+            };
+            postFormWithResponse("../../service/scraping-service/scraping-url.php",
+            newData, function(response){
+                try {
+                    console.log(response);
+                } catch (error) {
+                    console.log(error);
+                }
+            });
+        });
     }
 });

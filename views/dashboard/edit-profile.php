@@ -163,7 +163,7 @@
                                             <label for="name">Contraseña</label>
                                             <div class="input-group input-radius">
                                                 <div class="input-group-prepend">
-                                                    <div id="color-i-icon" class="input-group-text"><i class="fas fa-user"></i></div>
+                                                    <div id="color-i-icon" class="input-group-text"><i class="fas fa-lock"></i></div>
                                                 </div>
                                                 <input type="password" class="form-control" id="name" name="name" placeholder="Contraseña">
                                             </div>
@@ -172,7 +172,7 @@
                                             <label for="rfc">Contraseña</label>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <div id="color-i-icon" class="input-group-text"><i class="fas fa-key"></i></div>
+                                                    <div id="color-i-icon" class="input-group-text"><i class="fas fa-lock"></i></div>
                                                 </div>
                                                 <input type="password" class="form-control" id="rfc" name="rfc" placeholder="Contraseña">
                                             </div>

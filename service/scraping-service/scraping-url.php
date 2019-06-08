@@ -3,7 +3,7 @@
     include("../../public/dist/helper/simple-html-dom.php");
 
     $url = $_POST['url'];
-    $new = $_POST['new'];
+    $new = $_POST['newspaper'];
 
     echo $new;
     // switch ($new) {

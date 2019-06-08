@@ -3,8 +3,7 @@ $(document).ready(function(){
     onInit();
 
     function onInit() {
-        const scrapingDate = new Date().getDate();
-        if (scrapingDate == 1) {
+        if (new Date().getDate() == 1) {
             getNewsFoundData();
         } 
     }
@@ -17,8 +16,8 @@ $(document).ready(function(){
             paperForm, function(response){
                 try {
                     const newsFound = JSON.parse(response);
-                    newsFound.map(newspaper =>{
-                        newspaper.new = newspaper;
+                    newsFound.map(newsFound =>{
+                        newsFound.newspaper = newspaper;
                     });
                     dateFilter(newsFound);
                 } catch (error) {
@@ -81,11 +80,11 @@ $(document).ready(function(){
         getContentByNew(newsFilter);
     }
 
-    function getContentByNew(newsFilter) {
+    function getContentByNew(newsFilter) {        
         newsFilter.forEach(news => {
             const newData = { 
                 url: news.link,
-                new: news.new
+                newspaper: news.newspaper
             };
             postFormWithResponse("../../service/scraping-service/scraping-url.php",
             newData, function(response){

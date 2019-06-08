@@ -22,7 +22,7 @@ $(document).ready(function(){
                     });
                     dateFilter(newsFound);
                 } catch (error) {
-                    console.log(response);
+                    console.log(error);
                 }
             });
         });

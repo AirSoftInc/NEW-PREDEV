@@ -65,6 +65,18 @@
             getNewsFromTwitter();
         break;
 
+        case $new =='BING':
+            getNewsFromBing();
+        break;
+
+        case $new =='GOOGLE':
+            getNewsFromGoogle();
+        break;
+
+        case $new =='IMAGEN_VERACRUZ':
+            getNewsFromImagenVeracruz();
+        break;
+
         default:
             echo "Newspaper not found";
         break;
@@ -363,6 +375,70 @@
             array_push($newsFound, $newData);
         }
 
+        $jsonString = json_encode($newsFound);
+        echo $jsonString;
+    }
+
+    //This method is for scraping for Bing
+    function getNewsFromBing(){
+        $newsFound = [];
+        $url = "https://www.bing.com/news/search?q=discriminación+en+Veracruz&FORM=HDRSC6";
+        $htmlFile = file_get_html($url); 
+
+        foreach($htmlFile->find("div.news-card") as $new){
+
+            $date = $new->find("span", 2)->text();
+            $title = $new->find("a", 1)->text();	
+            $link = $new->find("a", 1)->href;
+
+            $newData = new NewData($link, $title, $date);
+            array_push($newsFound, $newData);
+        }
+
+        $jsonString = json_encode($newsFound);
+        echo $jsonString;
+    }
+
+    //This method is for scraping for Google
+    function getNewsFromGoogle(){  
+        $newsFound = []; 
+        $url = "https://www.google.es/search?q=discriminacion+en+veracruz&client=safari&source=lnms&tbm=nws&sa=X&ved=0ahUKEwi-9LX6i7HiAhUPXK0KHSF0DjgQ_AUIDygC&biw=1280&bih=647";
+        $htmlFile = file_get_html($url); 
+
+        foreach($htmlFile->find("div.g") as $new){
+
+            $date = ".../2019";
+            // $date = $new->find("span.f", 0)->text();
+            $title = "Discriminan";
+            // $title = $new->find("a", 1)->text();
+            $link = $new->find("a", 1)->href;
+            // $link = $new->find("a", 1)->href; exito
+
+            $newData = new NewData($link, $title, $date);
+            array_push($newsFound, $newData);
+        }
+
+        $jsonString = json_encode($newsFound);
+        echo $jsonString;    
+
+    }  
+    
+    //This method is for scraping for Imagen Veracruz
+    function getNewsFromImagenVeracruz(){
+        $newsFound = [];
+        $url = "https://imagendeveracruz.mx/search?q=Discriminación";
+        $htmlFile = file_get_html($url); 
+
+        foreach($htmlFile->find("div.content-timeline__item") as $new){
+
+            $date = "2019";
+            $title = $new->find("a", 0)->title;	
+            $link = $new->find("a", 0)->href;
+
+            $newData = new NewData($link, $title, $date);
+            array_push($newsFound, $newData);
+        }
+        
         $jsonString = json_encode($newsFound);
         echo $jsonString;
     }

@@ -1,4 +1,5 @@
     let newsFilter = [];
+    let newsFinalFilter = [];
     
     const yearsInForce = ["2018", "2019", "2020"];
 
@@ -32,7 +33,7 @@
         buildRegex("NO DISCRIMINACIÓN"), buildRegex("SIN DISCRIMINACIÓN"), buildRegex("PREVENIR LA DISCRIMINACIÓN"),
         buildRegex("ELIMINAR LA DISCRIMINACIÓN"), buildRegex("CONTRA DE LA DISCRIMINACIÓN"),
         buildRegex("ELIMINACIÓN DE LA DISCRIMINACIÓN"), buildRegex("COMBATE A LA DISCRIMINACIÓN"), buildRegex("EVITAR DISCRIMINACIÓN"),
-        buildRegex("CONTRA LA DISCRIMINACIÓN")
+        buildRegex("CONTRA LA DISCRIMINACIÓN"), buildRegex("PREVENIR DISCRIMINACIÓN"), buildRegex("CONCIENCIA SOBRE LA DISCRIMINACIÓN")
     ];
 
 function searchPhrases(text){
@@ -44,20 +45,21 @@ function searchPhrases(text){
             phraseFound.push(phrase);
         }
     });
+
     return phraseFound;
 }
 
-function searchNonDiscriminationPhrases(text){
+function searchNonDiscriminationPhrases(text){    
     let nonDiscriminationPhraseFound = [];
     nonDiscriminationPhrases.forEach(phrase =>{
         const indexFound = text.search(phrase);
-        
+     
         if (indexFound != -1) {
-            nonDiscriminationPhraseFound.push(phrase);
+            nonDiscriminationPhraseFound.push(phrase);            
         }
     });
+
     return nonDiscriminationPhraseFound;
-    
 }
 
 function arraysIntersection(text, compareArray){
@@ -84,4 +86,18 @@ function arraysIntersection(text, compareArray){
   function buildRegex(text){
       const keyword = text.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
       return new RegExp(keyword, 'ig');
+  }
+
+  function cleanTextByPhrases(phrase){
+
+    f1 = phrase.replace(/,/g, "");
+    f2 = f1.replace(/:/g, "");
+    f3 = f2.replace(/;/g, "");
+    f4 = f3.replace(/”/g, "");
+    f5 = f4.replace(/"/g, "");
+    f6 = f5.replace(/{/g, "");
+    f7 = f6.replace(/}/g, "");
+    f8 = f7.replace(/“/g, "");
+
+    return f8.toUpperCase();
   }

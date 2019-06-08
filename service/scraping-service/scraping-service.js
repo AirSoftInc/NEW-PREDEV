@@ -21,7 +21,7 @@ $(document).ready(function(){
                     });
                     dateFilter(newsFound);
                 } catch (error) {
-                    console.log(error);
+                    console.error(error);
                 }
             });
         });
@@ -57,37 +57,36 @@ $(document).ready(function(){
     }
 
     function analysisByPhrases(discriminationWordsFilter){
-        
-        let newsFilterByPhrases = [];
+  
         discriminationWordsFilter.forEach(newData =>{
-            let phraseFound = searchPhrases(newData.title);
-
-            phraseFound.length > 0 ? newsFilter.push(newData) : newsFilterByPhrases.push(newData);
+            let phraseFound = searchPhrases(cleanTextByPhrases(newData.title));
+            if (phraseFound.length > 0) {
+                newsFilter.push(newData);
+            }
         });
 
         finalAnalisisByPhrases(newsFilter);
     }
 
     function finalAnalisisByPhrases(newsFilterByPhrases){
-        
-        let finalNewsFilterByPhrases = [];
         newsFilterByPhrases.forEach(newData => {
-            let nonDiscriminationPhrasesFound = searchNonDiscriminationPhrases(newData.title);
-
-            nonDiscriminationPhrasesFound.length > 0 ? finalNewsFilterByPhrases.push(newData) : newsFilter.push(newData);
+            const nonDiscriminationPhrasesFound = searchNonDiscriminationPhrases(cleanTextByPhrases(newData.title));
+            
+            if (nonDiscriminationPhrasesFound.length == 0) {
+                newsFinalFilter.push(newData)
+            }
         });
 
-        getContentByNew(newsFilter);
+        getContentByNew(newsFinalFilter);
     }
 
-    function getContentByNew(newsFilter) {        
+    function getContentByNew(newsFilter) {
         newsFilter.forEach(news => {
             const newData = { 
                 url: news.link,
                 newspaper: news.newspaper
             };
-            postFormWithResponse("../../service/scraping-service/scraping-url.php",
-            newData, function(response){
+            postFormWithResponse("../../service/scraping-service/scraping-url.php", newData, function(response){
                 try {
                     console.log(response);
                 } catch (error) {

@@ -5,84 +5,84 @@
     $url = $_POST['url'];
     $new = $_POST['newspaper'];
 
-    echo $new;
-    // switch ($new) {
-    //     case $new =='DIARIO_XALAPA':
-    //         getNewsFromDiarioXalapa($url);
-    //     break;
+    // echo $new;
+    switch ($new) {
+        case $new =='DIARIO_XALAPA':
+            getNewsFromDiarioXalapa($url);
+        break;
 
-    //     case $new =='MUNDO_XALAPA':
-    //         getNewsFromMundoXalapa($url);
-    //     break;
+        case $new =='MUNDO_XALAPA':
+            getNewsFromMundoXalapa($url);
+        break;
         
-    //     case $new =='HERALDO_COATZACOALCOS':
-    //         getNewsFromHeraldoCoatzacoalcos($url);
-    //     break;
+        case $new =='HERALDO_COATZACOALCOS':
+            getNewsFromHeraldoCoatzacoalcos($url);
+        break;
         
-    //     case $new =='DIARIO_LIBERAL':
-    //         getNewsFromDiarioLiberal($url);
-    //     break;
+        case $new =='DIARIO_LIBERAL':
+            getNewsFromDiarioLiberal($url);
+        break;
 
-    //     case $new =='EL_MUNDO':
-    //         getNewsFromElMundo($url);
-    //     break;
+        case $new =='EL_MUNDO':
+            getNewsFromElMundo($url);
+        break;
 
-    //     case $new =='EL_BUEN_TONO':
-    //         getNewsFromBuenTono($url);
-    //     break;
+        case $new =='EL_BUEN_TONO':
+            getNewsFromBuenTono($url);
+        break;
 
-    //     case $new =='NOTICIAS_PERFIL':
-    //         getNewsFromNoticiasPerfil($url);
-    //     break;
+        case $new =='NOTICIAS_PERFIL':
+            getNewsFromNoticiasPerfil($url);
+        break;
 
-    //     case $new =='LA_POLITICA':
-    //         getNewsFromLaPolitica($url);
-    //     break;
+        case $new =='LA_POLITICA':
+            getNewsFromLaPolitica($url);
+        break;
 
-    //     case $new =='VANGUARDIA':
-    //         getNewsVanguardiaVeracruz($url);
-    //     break;
+        case $new =='VANGUARDIA':
+            getNewsVanguardiaVeracruz($url);
+        break;
 
-    //     case $new =='EXCELSIOR':
-    //         getNewsFromExcelsior($url);
-    //     break;
+        case $new =='EXCELSIOR':
+            getNewsFromExcelsior($url);
+        break;
 
-    //     case $new =='SOL_MEXICO':
-    //         getNewsFromSolDeMexico($url);
-    //     break;
+        case $new =='SOL_MEXICO':
+            getNewsFromSolDeMexico($url);
+        break;
 
-    //     case $new =='MILENIO':
-    //         getNewsFromMilenio($url);
-    //     break;
+        case $new =='MILENIO':
+            getNewsFromMilenio($url);
+        break;
 
-    //     case $new =='YAHOO':
-    //         getNewsFromYahoo($url);
-    //     break;
+        case $new =='YAHOO':
+            getNewsFromYahoo($url);
+        break;
 
-    //     case $new =='DIARIO_SIN_SECRETOS':
-    //         getNewsFromDiarioSinSecretos($url);
-    //     break;
+        case $new =='DIARIO_SIN_SECRETOS':
+            getNewsFromDiarioSinSecretos($url);
+        break;
 
-    //     case $new =='TWITTER':
-    //         getNewsFromTwitter($url);
-    //     break;
+        case $new =='TWITTER':
+            getNewsFromTwitter($url);
+        break;
 
-    //     case $new =='BING':
-    //         getNewsFromBing($url);
-    //     break;
+        case $new =='BING':
+            getNewsFromBing($url);
+        break;
 
-    //     case $new =='GOOGLE':
-    //         getNewsFromGoogle($url);
-    //     break;
+        case $new =='GOOGLE':
+            getNewsFromGoogle($url);
+        break;
 
-    //     case $new =='IMAGEN_VERACRUZ':
-    //         getNewsFromImagenVeracruz($url);
-    //     break;
+        case $new =='IMAGEN_VERACRUZ':
+            getNewsFromImagenVeracruz($url);
+        break;
 
-    //     default:
-    //         echo "new not found";
-    //     break;
-    // } 
+        default:
+            echo "new not found";
+        break;
+    } 
 
     // //This method is for scraping for the new Diario de Xalapa
     // function getNewsFromDiarioXalapa($link) {
@@ -98,18 +98,17 @@
     // }
 
     // //This method is for scraping for the new Mundo de Xalapa
-    // function getNewsFromMundoXalapa($link) {
-    //     $link = $url;
-    //     $htmlFile = file_get_html($url); 
+    function getNewsFromMundoXalapa($url) {
+        $htmlFile = file_get_html($url); 
         
-    //     foreach($htmlFile->find("div.noticia_content") as $new){	
+        foreach($htmlFile->find("div.noticia_content") as $new){	
 
-    //         $c= $new->find("p", 0);
+            $c= $new->find("p", 0);
 
-    //         echo $c;
+            echo $c;
 
-    //     }
-    // }
+        }
+    }
 
     // //This method is for scraping for the new Heraldo de Coatzacoalcos
     // function getNewsFromHeraldoCoatzacoalcos($link) {

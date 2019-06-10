@@ -208,10 +208,14 @@
         $htmlFile = file_get_html($url); 
 
         foreach($htmlFile->find("div.td-post-content") as $new){
+            $text = "";
 
-            $c= $new->find("p", 0);
-
-            echo $c;
+            for ($i=0; $i < 20; $i++) {
+                $c= $new->find("p", $i);
+                $text = $text.$c;
+            }
+            
+            echo $text;
         }
     }
 

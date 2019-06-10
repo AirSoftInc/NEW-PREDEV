@@ -21,7 +21,7 @@
     //     "EXCELSIOR", "SOL_MEXICO", "MILENIO", "YAHOO", "TWITTER", "GOOGLE", "BING", "IMAGEN_VERACRUZ"
     // ];
 
-    const newspaper = [ "MUNDO_XALAPA" ];
+const newspaper = [ "VANGUARDIA" ];
 
     const discriminationPhrases = [
         buildRegex("CRÍMENES DE ODIO"), buildRegex("DELITOS DE ODIO"), buildRegex("COMUNIDAD GAY"),
@@ -76,8 +76,10 @@ function arraysIntersection(text, compareArray){
           f4 = f3.replace(/”/g, "");
           f5 = f4.replace(/"/g, "");
           f6 = f5.replace(/{/g, "");
+          f7 = f6.replace(/}/g, "");
+          f8 = f7.replace(/“/g, "");
 
-          cleanArray.push(f6);
+          cleanArray.push(f8);
       });
       
       return cleanArray;

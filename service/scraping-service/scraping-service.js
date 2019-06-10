@@ -44,12 +44,15 @@ $(document).ready(function(){
     function keyWordFilter(dateNewsFilter) {
          
     	let discriminationWordsFilter = [];
-    	dateNewsFilter.forEach(newData =>{
+    	dateNewsFilter.map(newData =>{
             const isPositive = arraysIntersection(newData.title.toUpperCase(), mainNoDiscriminationWords);
     	    const isValidNew = arraysIntersection(newData.title.toUpperCase(), mainDiscriminationWords);
 
     	    if (isPositive.length == 0){
-    	    	isValidNew.length > 0 ? newsFilter.push(newData) : discriminationWordsFilter.push(newData);
+                if (isValidNew.length > 0) {
+                    newsFilter.push(newData);
+                    newData.isCase = true;
+                } else { discriminationWordsFilter.push(newData) }
     	    }
     	});
 
@@ -81,6 +84,7 @@ $(document).ready(function(){
     }
 
     function getContentByNew(newsFilter) {
+        const url = "../../service/scraping-service/save-case-service.php";
         newsFilter.forEach(news => {
             const newData = { 
                 url: news.link,
@@ -88,7 +92,42 @@ $(document).ready(function(){
             };
             postFormWithResponse("../../service/scraping-service/scraping-url.php", newData, function(response){
                 try {
-                    console.log(response);
+                    let zoneCount = 0;
+                    dataZone.forEach(zone =>{
+                        const identifiedAreas = arraysIntersection(response.toUpperCase(), zone.municipalities);
+                        if (identifiedAreas.length > 0) {
+                            zoneCount = zoneCount + 1;
+                            identifiedAreas.map(area =>{
+                                const newDataForm = {
+                                    title: news.title,
+                                    date: news.date,
+                                    isCase: news.isCase,
+                                    link: news.link,
+                                    zone: zone.zone
+                                };
+
+                                postFormWithResponse(url, newDataForm, function(response) {
+                                    console.debug(response);
+                                });
+                            });
+                        }
+                    });
+
+                    if (zoneCount === 0) {
+                        dataZone.forEach(area =>{
+                            const newDataForm = {
+                                title: news.title,
+                                date: news.date,
+                                isCase: news.isCase,
+                                link: news.link,
+                                zone: area.zone
+                            };
+
+                            postFormWithResponse(url, newDataForm, function (response) {
+                                console.debug(response);
+                            });
+                        });
+                    }
                 } catch (error) {
                     console.log(error);
                 }

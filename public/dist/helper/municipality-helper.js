@@ -31,7 +31,7 @@ const capitalZone = [
 
 const lasMontañasZone = [
     "AQUILA", "MALTRATA", "ACULTZINGO", "SOLEDAD ATZOMPA", "XOXOCOTLA", "TLAQUILPA", "ASTACINGA", "TEHULPANGO", "MIXTA DE ALTAMIRANO",
-    "ZONGOLICA", "TEZONAPA", "OMEALCA", "CUITLÁUAC", "CARRILLO PUERTO", "PASO DEL MACHO", "CAMARÓN DE TEJADA", "ZENTLA",
+    "ZONGOLICA", "TEZONAPA", "OMEALCA", "CUITLÁHUAC", "CARRILLO PUERTO", "PASO DEL MACHO", "CAMARÓN DE TEJADA", "ZENTLA",
     "COMAPA", "TLACOTEPEC DE MEJÍA", "TENANPA", "TOTUTLA", "SOCHIAPA", "HUATUSCO", "COSCOMATEPEC", "ALPATLÁHUAC", "CALCAHUALCO",
     "TOMATLÁN", "IXHUATLÁN DEL CAFÉ", "TEPATLAXCO", "AMATLÁN DE LOS REYES", "CÓRDOBA", "FORTÍN", "IXTACZOQUITLÁN", "NARANJAL",
     "TILAPAN", "TEQUILA", "NOGALES", "COETZALA", "YANGA", "ATOYAC", "ZENTLA", "CHOCAMÁN", "ATZACAN", "ORIZABA", "MAGDALENA", "CUICHAPA",
@@ -59,3 +59,8 @@ const olmecaZone = [
     "NACHITAL DE LAZARO CARDENAZ DEL RIO", "IXHUATLÁN DEL SURESTE", "MOLOACÁN", "MINATITLÁN", "HIDALGOTITLÁN", "JÁLTIPAN", "TEXISTEPEC",
     "OTEAPAN"
 ];
+
+const dataZone = [{ zone: "HUASTECA ALTA", municipalities: huastecaAltaZone }, { zone: "HUASTECA BAJA", municipalities: huastecaBajaZone },
+{ zone: "TOTONACA", municipalities: totonacaZone }, { zone: "NAUTLA", municipalities: nautlaZone }, { zone: "CAPITAL", municipalities: capitalZone },
+{ zone: "LAS MONTANAS", municipalities: lasMontañasZone }, { zone: "SOTAVENTO", municipalities: sotaventoZone },
+{ zone: "PAPALOAPAN", municipalities: papaloapanZone }, { zone: "LOS TUXTLA", municipalities: losTuxtlaZone }, { zone: "OLMECA", municipalities: olmecaZone }];

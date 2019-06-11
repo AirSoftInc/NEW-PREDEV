@@ -21,6 +21,7 @@ CREATE TABLE case_data(
     date VARCHAR(100),
     isCase BOOLEAN,
     zone_id INT,
+    status VARCHAR(50) DEFAULT "PENDING",
     CONSTRAINT user_user_id_fk
 	FOREIGN KEY (zone_id) REFERENCES zone (id) ON DELETE CASCADE
 );

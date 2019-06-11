@@ -10,10 +10,10 @@
         <li id="statistics"><a href="statistics.php" aria-expanded="false"><i class="nav-icon ti ti-bar-chart"></i><span
                     class="nav-title">Estadisticas</span></a> </li>
 
-        <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i
+        <li id="cases"><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i
                     class="nav-icon ti ti-list"></i><span class="nav-title">Casos</span></a>
             <ul aria-expanded="false">
-                <li> <a href='#'>Generales</a> </li>
+                <li id="general-cases"> <a href='general-cases.php'>Generales</a> </li>
                 <li> <a href='#'>Asignaciones</a> </li>
                 <li> <a href='#'>Mis casos</a> </li>
             </ul>

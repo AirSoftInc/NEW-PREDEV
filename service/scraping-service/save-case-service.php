@@ -28,7 +28,7 @@
         die('The link already exists');
     }
 
-    $queryCaseData = "INSERT INTO case_data VALUES(DEFAULT, '$title', '$link', '$date', $isCase, $zone_id);";
+    $queryCaseData = "INSERT INTO case_data VALUES(DEFAULT, '$title', '$link', '$date', $isCase, DEFAULT, $zone_id);";
     $caseReult = mysqli_query($connection, $queryCaseData);
 
     if (!$caseReult) {

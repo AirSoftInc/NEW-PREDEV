@@ -110,3 +110,8 @@
 .border-buttom{
     border-radius: 20px;
 }
+
+.PENDIENTE{
+    color: #e67e22;
+    font-style: oblique;
+}

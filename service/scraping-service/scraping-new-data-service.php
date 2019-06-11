@@ -130,7 +130,7 @@
             $date = $new->find("p", 0)->text();
             $title = $new->find("a",0)->text();
             $link = $new->find("a", 0)->href;
-            $newData = new NewData($link, $title, $date);
+            $newData = new NewData("http://heraldodecoatzacoalcos.com.mx/".$link, $title, $date);
             array_push($newsFound, $newData);
         }
 

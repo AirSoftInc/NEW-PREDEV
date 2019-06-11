@@ -16,24 +16,26 @@
 
     //This array content newspaper of the Veracruz state
     // const newspaper = [
-    //     "DIARIO_XALAPA","MUNDO_XALAPA", "HERALDO_COATZACOALCOS", "DIARIO_LIBERAL", "EL_MUNDO",
-    //     "EL_BUEN_TONO", "NOTICIAS_PERFIL", "DIARIO_SIN_SECRETOS", "LA_POLITICA", "VANGUARDIA",
+    //     "DIARIO_XALAPA","MUNDO_XALAPA", "HERALDO_COATZACOALCOS", "DIARIO_LIBERAL", "*EL_MUNDO",
+    //     "EL_BUEN_TONO", "NOTICIAS_PERFIL", "DIARIO_SIN_SECRETOS", "*LA_POLITICA", "*VANGUARDIA",
     //     "EXCELSIOR", "SOL_MEXICO", "MILENIO", "YAHOO", "TWITTER", "GOOGLE", "BING", "IMAGEN_VERACRUZ"
     // ];
 
-const newspaper = [ "VANGUARDIA" ];
+    const newspaper = [ "VANGUARDIA" ];
 
     const discriminationPhrases = [
         buildRegex("CRÍMENES DE ODIO"), buildRegex("DELITOS DE ODIO"), buildRegex("COMUNIDAD GAY"),
         buildRegex("DIVERSIDAD SEXUAL SIN"), buildRegex("VIOLENCIA CONTRA LAS MUJERES"),
-        buildRegex("CONTRA GAYS"), buildRegex("VIOLENCIA CONTRA MUJERES"), buildRegex("BODAS GAY")
+        buildRegex("CONTRA GAYS"), buildRegex("VIOLENCIA CONTRA MUJERES"), buildRegex("BODAS GAY"),
+        buildRegex("PINCHES INDIOS")
     ];
 
     const nonDiscriminationPhrases = [
         buildRegex("NO DISCRIMINACIÓN"), buildRegex("SIN DISCRIMINACIÓN"), buildRegex("PREVENIR LA DISCRIMINACIÓN"),
         buildRegex("ELIMINAR LA DISCRIMINACIÓN"), buildRegex("CONTRA DE LA DISCRIMINACIÓN"),
         buildRegex("ELIMINACIÓN DE LA DISCRIMINACIÓN"), buildRegex("COMBATE A LA DISCRIMINACIÓN"), buildRegex("EVITAR DISCRIMINACIÓN"),
-        buildRegex("CONTRA LA DISCRIMINACIÓN"), buildRegex("PREVENIR DISCRIMINACIÓN"), buildRegex("CONCIENCIA SOBRE LA DISCRIMINACIÓN")
+        buildRegex("CONTRA LA DISCRIMINACIÓN"), buildRegex("PREVENIR DISCRIMINACIÓN"), buildRegex("CONCIENCIA SOBRE LA DISCRIMINACIÓN"),
+        buildRegex("EVITAR LA DISCRIMINACIÓN"), buildRegex("NO HAY DISCRIMINACIÓN")
     ];
 
 function searchPhrases(text){
@@ -78,8 +80,10 @@ function arraysIntersection(text, compareArray){
           f6 = f5.replace(/{/g, "");
           f7 = f6.replace(/}/g, "");
           f8 = f7.replace(/“/g, "");
+          f9 = f8.replace(/’/g, "");
+          f10 = f9.replace(/‘/g, "");
 
-          cleanArray.push(f8);
+          cleanArray.push(f10);
       });
       
       return cleanArray;
@@ -100,6 +104,8 @@ function arraysIntersection(text, compareArray){
     f6 = f5.replace(/{/g, "");
     f7 = f6.replace(/}/g, "");
     f8 = f7.replace(/“/g, "");
+    f9 = f8.replace(/’/g, "");
+    f10 = f9.replace(/‘/g, "");
 
-    return f8.toUpperCase();
+    return f10.toUpperCase();
   }

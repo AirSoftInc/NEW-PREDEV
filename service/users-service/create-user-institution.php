@@ -25,7 +25,7 @@
         die('EXIST');
     }
 
-    $queryUser = "INSERT INTO users (name, last_name, surname, email, user_type) VALUES ('$name', '$lastName', '$surname', '$email', '$userType');";
+    $queryUser = "INSERT INTO users (name, last_name, surname, email, user_type, status) VALUES ('$name', '$lastName', '$surname', '$email', '$userType', false);";
     $userResult = mysqli_query($connection, $queryUser);
 
     if (!$userResult) {

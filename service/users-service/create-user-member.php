@@ -18,7 +18,7 @@
         die('EXIST');
     }
 
-    $queryUser = "INSERT INTO users (name, last_name, surname, email, user_type) VALUES ('$name', '$lastName', '$surname', '$email', '$userType');";
+    $queryUser = "INSERT INTO users (name, last_name, surname, email, user_type, status) VALUES ('$name', '$lastName', '$surname', '$email', '$userType', false);";
     $userResult = mysqli_query($connection, $queryUser);
 
     if (!$userResult) {
@@ -32,7 +32,7 @@
         $id = $row['id'];
     }
 
-    $queryUserInfo = "INSERT INTO user_aditional_info VALUES(DEFAULT, $id, 'NULL', 'NULL', 'NULL', 'NULL', '$city', '$zipCode', '$municipality', 'NULL', 'NULL', 'NULL', 'NULL');";
+    $queryUserInfo = "INSERT INTO user_aditional_info (user_id, city, zip_code, municipality) VALUES($id, '$city', '$zipCode', '$municipality');";
     $userResultInfo = mysqli_query($connection, $queryUserInfo);
 
     if (!$userResultInfo) {

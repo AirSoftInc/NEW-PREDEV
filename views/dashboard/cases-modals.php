@@ -22,7 +22,7 @@
                         <button type="submit" id="btnStatus" class="btn btn-success">Cambiar Estatus</button>
                     </div>
                     <div class="offset-1 form-group col-lg-2">
-                        <button type="button" class="btn btn-danger cancel" data-dismiss="modal" id="cancel" name="cancel" >Cancelar</button>
+                        <button type="button" id="statusCancel" class="btn btn-danger cancel" data-dismiss="modal" id="cancel" name="cancel" >Cancelar</button>
                     </div>
                 </div>
             </div>
@@ -44,14 +44,14 @@
                     <p class="title-register col-lg-12">A que institución quieres asignar el caso:</p>
                     <div class="form-group col-lg-8">
                         <select id="institution" name="institution" class="form-control">
-                            <option>Selecciona una institución</option>
+                            <option value="NULL">Selecciona una institución</option>
                         </select>
                     </div>
                     <div class="form-group col-lg-2">
                         <button type="submit" id="btnAssined" class="btn btn-success">Asignar</button>
                     </div>
                     <div class="form-group col-lg-2">
-                        <button type="button" class="btn btn-danger cancel" data-dismiss="modal" id="cancel" name="cancel" >Cancelar</button>
+                        <button type="button" id="assignedCanel" class="btn btn-danger cancel" data-dismiss="modal" id="cancel" name="cancel" >Cancelar</button>
                     </div>
                 </div>
             </div>

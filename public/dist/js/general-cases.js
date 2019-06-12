@@ -7,6 +7,7 @@ $(document).ready(function(){
     function onInit(){
         getGeneralCases();
         getStatus();
+        getInstitutions();
     }
 
     function getGeneralCases() {
@@ -80,13 +81,35 @@ $(document).ready(function(){
                 });
             });
         });
+
+        statusSelected = document.getElementById("status").value = "NULL";
     });
 
     function getStatus() {
         const selectElement = document.getElementById("status");
         selectElement.innerHTML += "";
         CASE_STATUS_SELECT.forEach(status =>{
-            selectElement.innerHTML += `<option value="${status}">${status}</option>`;
+            selectElement.innerHTML += `<option value='${status}'>${status}</option>`;
         });
     }
+
+    function getInstitutions(){
+        const userTypeForm = {type: "I"};
+        const selectElement = document.getElementById("institution");
+        retriveWithParams("../../service/users-service/get-all-users-by-type-service.php", userTypeForm, function(response){
+            const institutions = JSON.parse(response);
+            
+            institutions.forEach(institutions =>{
+                selectElement.innerHTML += `<option value="${institutions.name}">${institutions.name}</option>`;
+            });
+        })
+    }
+
+    $(document).on('click', '#statusCancel', function () {
+        statusSelected = document.getElementById("status").value = "NULL";
+    });
+
+    $(document).on('click', '#assignedCanel', function () {
+        statusSelected = document.getElementById("institution").value = "NULL";
+    });
 });

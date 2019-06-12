@@ -3,7 +3,7 @@ $(document).ready(function(){
     onInit();
 
     function onInit() {
-        if (new Date().getDate() == 10) {
+        if (new Date().getDate() == 11) {
             getNewsFoundData();
         } 
     }

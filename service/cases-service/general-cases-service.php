@@ -1,7 +1,7 @@
 <?php
     include('../../config/connection.php');
 
-    $query = "SELECT DISTINCT title, link, status, date FROM case_data;";
+    $query = "SELECT * FROM case_data WHERE isCase = TRUE AND isDeleted = FALSE GROUP BY title;";
     $result = mysqli_query($connection, $query);
 
     if (!$result) {
@@ -12,10 +12,12 @@
 
     while($row = mysqli_fetch_array($result)){
         $json[] = array(
+            'id' => $row['id'],
             'title' => $row['title'],
             'link' => $row['link'],
             'status' => $row['status'],
-            'date' => $row['date']
+            'date' => $row['date'],
+            'isAssigned' => $row['isAssigned']
         );
     }
 

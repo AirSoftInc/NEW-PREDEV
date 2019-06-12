@@ -59,6 +59,7 @@
                                                     <th scope="col">Titulo</th>
                                                     <th scope="col">Fecha</th>
                                                     <th scope="col">Estatus</th>
+                                                    <th scope="col">Asignado a</th>
                                                     <th scope="col">Acciones</th>
                                                 </tr>
                                             </thead>
@@ -74,6 +75,7 @@
             </div>
             <?php
                 require_once("footer.php");
+                require_once("cases-modals.php");
             ?>
         </div>
         <?php

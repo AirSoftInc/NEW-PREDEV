@@ -115,3 +115,15 @@
     color: #e67e22;
     font-style: oblique;
 }
+
+.case-title{
+    font-size: 20px !important;
+}
+
+.modal-title{
+    font-size: 25px !important;
+}
+
+.unassigned{
+    color: #e40059 !important;
+}

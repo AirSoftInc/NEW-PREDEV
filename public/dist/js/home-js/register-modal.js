@@ -1,4 +1,4 @@
-$(document).ready(function(){   
+$(document).ready(function(){
 
     onInit();
 
@@ -23,6 +23,7 @@ $(document).ready(function(){
                 
                 postFormWithResponse("../../service/users-service/create-user-member.php", userEmployeeForm, function (respose){
                     console.log(respose);
+                    swal("Se ha aceptado la solicitud", "Su registro a concluido con exito.", "success");
                 }); 
                 
                 $('#user-form').trigger('reset');
@@ -49,6 +50,7 @@ $(document).ready(function(){
 
                 postFormWithResponse("../../service/users-service/create-user-institution.php", userInstitutionForm, function (respose) {
                     console.log(respose);
+                    swal("Su registro ha concluido con exito", "Se le proporcionará una contraseña provisional por correo.", "success");
                 }); 
                 
                 $('#user-form').trigger('reset');

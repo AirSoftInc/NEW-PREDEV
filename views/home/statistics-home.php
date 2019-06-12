@@ -31,7 +31,56 @@
                 </div>
             </div>
         </section>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="service-details-section pb-80 bg-f10">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-12 col-lg-7">
+                        <div class="service-details ">
+                            <div class="a">
+                                <img class="alta" src="../../public/dist/img/img-home/mapa/Hausteca_alta.png">
+                                <br>
+                                <img class="baja" src="../../public/dist/img/img-home/mapa/huasteca_baja.png">
+                                <br>
+                                <img class="totonaca" src="../../public/dist/img/img-home/mapa/totonaca.png">
+                                <br>
+                                <img class="nautla" src="../../public/dist/img/img-home/mapa/nautla.png">
+                                <br>
+                                <img class="capital" src="../../public/dist/img/img-home/mapa/capital.png">
+                                <br>
+                                <img class="sotavento" src="../../public/dist/img/img-home/mapa/sotavento.png">
+                                <br>
+                                <img class="montanas" src="../../public/dist/img/img-home/mapa/las_montanas.png">
+                                <br>
+                                <img class="papaloapan" src="../../public/dist/img/img-home/mapa/papaloapan.png">
+                                <br>
+                                <div class="tuxtla">
+                                    <img class="tuxtla1" src="../../public/dist/img/img-home/mapa/los_tuxtla.png">
+                                </div>
+                                <img class="olmeca" src="../../public/dist/img/img-home/mapa/olmeca.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-5">
+                        <div class="service-details-sidebar">
+                            <div class="contact-box">
+                                <div class="contact-item statistics-chart">
+                                    <h4>Porcentaje de discriminación por zona </h4>
+                                    <div class="card text-dark bg-f9 col-sm-10">
+                                    <div id="chart">
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div>
+            <div id="chart">
+            </div>
+        </div>
         <?php
             require_once("footer.php");
         ?>

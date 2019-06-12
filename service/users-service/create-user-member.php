@@ -32,7 +32,7 @@
         $id = $row['id'];
     }
 
-    $queryUserInfo = "INSERT INTO user_aditional_info VALUES(DEFAULT, $id, 'NULL', 'NULL', 'NULL', 'NULL', '$city', '$zipCode', '$municipality', 'NULL', 'NULL', 'NULL');";
+    $queryUserInfo = "INSERT INTO user_aditional_info VALUES(DEFAULT, $id, 'NULL', 'NULL', 'NULL', 'NULL', '$city', '$zipCode', '$municipality', 'NULL', 'NULL', 'NULL', 'NULL');";
     $userResultInfo = mysqli_query($connection, $queryUserInfo);
 
     if (!$userResultInfo) {

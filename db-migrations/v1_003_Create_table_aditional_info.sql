@@ -11,6 +11,7 @@ CREATE TABLE user_aditional_info(
 	web_page VARCHAR(100),
 	facebook VARCHAR(100),
 	twitter VARCHAR(100),
+	image_profile VARCHAR(300),
   	CONSTRAINT user_user_id_fk
 	FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );

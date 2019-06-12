@@ -39,7 +39,7 @@
         $id = $row['id'];
     }
 
-    $queryUserInfo = "INSERT INTO user_aditional_info VALUES(DEFAULT, $id, '$description', '$rfc', '$telephone', '$address', '$city', '$zipCode', '$municipality', '$webPage', '$facebook', '$twitter');";
+    $queryUserInfo = "INSERT INTO user_aditional_info VALUES(DEFAULT, $id, '$description', '$rfc', '$telephone', '$address', '$city', '$zipCode', '$municipality', '$webPage', '$facebook', '$twitter','test/img/img.png');";
     $userResultInfo = mysqli_query($connection, $queryUserInfo);
 
     if (!$userResultInfo) {

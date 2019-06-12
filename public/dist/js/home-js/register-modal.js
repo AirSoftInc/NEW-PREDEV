@@ -10,7 +10,7 @@ $(document).ready(function(){
     $('#user-form').submit(function (e){
         switch ($('#userType').val()) {
             case "M":
-                const userEmployeForm = {
+                const userEmployeeForm = {
                     name: $('#name').val(),
                     lastName: $('#lastName').val(),
                     surname: $('#surname').val(),
@@ -18,13 +18,12 @@ $(document).ready(function(){
                     userType: $('#userType').val(),
                     city: $('#city').val(),
                     zipCode: $('#zipCode').val(),
-                    municipality: $('#municipality').val(),
-                    validate: "OK"
+                    municipality: $('#municipality').val()
                 }
                 
-                // postFormWithResponse("../../service/test.php", userEmployeForm, function (respose){
-                //     console.log(respose);
-                // }); 
+                postFormWithResponse("../../service/users-service/create-user-member.php", userEmployeeForm, function (respose){
+                    console.log(respose);
+                }); 
                 
                 $('#user-form').trigger('reset');
             break;
@@ -43,15 +42,14 @@ $(document).ready(function(){
                     city: $('#city').val(),
                     zipCode: $('#zipCode').val(),
                     municipality: $('#municipality').val(),
-                    webPage: $('#webPage').val(),
-                    facebook: $('#facebook').val(),
-                    twitter: $('#twitter').val(),
-                    validate: "OK"
+                    webPage: !!$('#webPage').val() ? $('#webPage').val() : null,
+                    facebook: !!$('#facebook').val() ? $('#facebook').val() : null,
+                    twitter: !!$('#twitter').val() ? $('#twitter').val() : null
                 }
 
-                // postFormWithResponse("../../service/test.php", userInstitutionForm, function (respose) {
-                //     console.log(respose);
-                // }); 
+                postFormWithResponse("../../service/users-service/create-user-institution.php", userInstitutionForm, function (respose) {
+                    console.log(respose);
+                }); 
                 
                 $('#user-form').trigger('reset');
             break;

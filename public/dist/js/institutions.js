@@ -60,9 +60,8 @@ $(document).ready(function(){
             id: id,
             email: email[0].id
         }
-        
-        $.post('../../service/update-status.php', userActive , function (respose){
-            console.log(respose);          
+
+        postFormWithResponse("../../service/users-service/update-status-servie.php", userActive, function(response){
             swal("Se ha aceptado la solicitud", "El usuario ha sido aceptado", "success");
             getUsers();
         });

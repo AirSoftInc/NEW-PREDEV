@@ -94,7 +94,7 @@ $(document).ready(function(){
     }
 
     function getInstitutions(){
-        const userTypeForm = {type: "I"};
+        const userTypeForm = {type: "I", filter: true};
         const selectElement = document.getElementById("institution");
         retriveWithParams("../../service/users-service/get-all-users-by-type-service.php", userTypeForm, function(response){
             const institutions = JSON.parse(response);

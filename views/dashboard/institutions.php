@@ -83,6 +83,8 @@
         ?>
         <script src="../../public/dist/js/jquery.min.js"></script>
         <script src="../../public/dist/js/institutions.js"></script>
+        <script src="../../public/dist/helper/crud-function-service.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </div>
 </body>
 

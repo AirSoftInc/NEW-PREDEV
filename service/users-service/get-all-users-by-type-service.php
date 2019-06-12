@@ -2,10 +2,16 @@
     include('../../config/connection.php');
 
     $type = $_POST['type'];
+    $filter = $_POST['filter'];
 
     if (isset($type)) {
-        $query = "SELECT * FROM users WHERE user_type = '$type' && status = 1";
-        $result = mysqli_query($connection, $query);
+        if ( $filter == "true") {
+            $query = "SELECT * FROM users WHERE user_type = '$type' && status = 1";
+            $result = mysqli_query($connection, $query);
+        } else {
+            $query = "SELECT * FROM users WHERE user_type = '$type'";
+            $result = mysqli_query($connection, $query);
+        }
 
         if (!$result) {
             die('Query failed' . mysqli_error($connection));

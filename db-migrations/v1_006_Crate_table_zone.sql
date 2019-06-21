@@ -24,6 +24,6 @@ CREATE TABLE case_data(
     status VARCHAR(50) DEFAULT "PENDIENTE",
     isDeleted BOOLEAN  DEFAULT false,
     isAssigned VARCHAR(300) DEFAULT "Sin asignar",
-    CONSTRAINT zone_zone_user_id_fk
+    CONSTRAINT zone_zone_id_fk
 	FOREIGN KEY (zone_id) REFERENCES zone (id) ON DELETE CASCADE
 );

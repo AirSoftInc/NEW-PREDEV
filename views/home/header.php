@@ -5,6 +5,7 @@
                 <div class="container">
                     <a class="navbar-brand" href="index.php">
                         <img id="logo_img" src="../../public/dist/img/img-dashboard/PREDEV.png" alt=""></a>
+                        <h6>Plataforma de prevención y monitorización de discriminación del estado de Veracruz. </h6>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
                         aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -13,7 +14,7 @@
                         <ul class="navbar-nav ml-xl-auto">
                             <li class="nav-item" id="home">
                                 <a href="index.php" class="nav-link" aria-haspopup="true"
-                                    aria-expanded="false">Home</i></a>
+                                    aria-expanded="false">Inicio</i></a>
                             </li>
                             <li class="nav-item" id="statistics-home">
                                 <a href="statistics-home.php" class="nav-link" aria-haspopup="true"

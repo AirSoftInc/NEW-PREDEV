@@ -154,7 +154,7 @@
                             <div class="thumb">
                                 <img alt="service img" src="../../public/dist/img/img-home/service/institution1.jpg">
                                 <div class="service-link-box">
-                                    <a href="https://www.conapred.org.mx/index.php">Ver más</a>
+                                    <a href="https://www.conapred.org.mx/index.php" target= blank>Ver más</a>
                                 </div>
                             </div>
                             <div class="content">
@@ -167,7 +167,7 @@
                             <div class="thumb">
                                 <img alt="service img" src="../../public/dist/img/img-home/service/institution2.jpg">
                                 <div class="service-link-box">
-                                    <a href="https://www.inegi.org.mx/default.html">Ver más</a>
+                                    <a href="https://www.inegi.org.mx/default.html" target= blank>Ver más</a>
                                 </div>
                             </div>
                             <div class="content">
@@ -180,7 +180,7 @@
                             <div class="thumb">
                                 <img alt="service img" src="../../public/dist/img/img-home/service/institution3.jpg">
                                 <div class="service-link-box">
-                                    <a href="http://www.cndh.org.mx/">Ver más</a>
+                                    <a href="http://www.cndh.org.mx/" target= blank>Ver más</a>
                                 </div>
                             </div>
                             <div class="content">

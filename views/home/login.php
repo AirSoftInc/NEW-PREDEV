@@ -49,6 +49,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-12 mt-3">
+                                                    <a type="cancel"  class="btn btn-secondary" href="../home/index.php">REGRESAR</a>
                                                     <a type="submit" id="btn2" class="btn btn-success" href="../dashboard/index.php">Ingresar</a>
                                                 </div>
                                             </div>

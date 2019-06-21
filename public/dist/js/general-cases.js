@@ -23,7 +23,7 @@ $(document).ready(function(){
                     <td><strong class="${caseSelected.status}">${caseSelected.status}</strong></td>
                     <td><strong style="${assignedClass}">${caseSelected.isAssigned}</strong></td>
                     <td>
-                        <a href="${caseSelected.link}" class="btn btn-icon btn-round btn-info" 
+                        <a href="${caseSelected.link}" target= blank class="btn btn-icon btn-round btn-info" 
                         data-toggle="tooltip" data-placement="top" title="Click para mas información"><i class="fa fa-info"></i></a>
 
                         <a href="javascript:void(0);" class="btn btn-icon btn-round btn-warning changue-status"

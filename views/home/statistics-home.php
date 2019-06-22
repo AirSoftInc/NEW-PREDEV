@@ -95,6 +95,7 @@
     <script src="../../public/dist/helper/crud-function-service.js"></script>
     <script src="../../public/dist/helper/lodash.js"></script>
     <script src="../../public/dist/helper/scraping-helper.js"></script>
+    <script src="../../public/dist/helper/phrases-helper.js"></script>
     <script src="../../service/scraping-service/scraping-service.js"></script>
 </body>
 
